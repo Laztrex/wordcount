@@ -3,7 +3,6 @@
 package main
 
 import (
-	"errors"
 	"flag"
 	"fmt"
 	"os"
@@ -33,9 +32,6 @@ func WordCount(s string) int {
 func readInput() (src string, err error) {
 	flag.Parse()
 	src = strings.Join(flag.Args(), "")
-	if src == "" {
-		return src, errors.New("missing string to match")
-	}
 	return src, nil
 }
 
